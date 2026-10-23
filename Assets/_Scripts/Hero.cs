@@ -9,7 +9,7 @@ public class Hero : MonoBehaviour
     public float rollMult = -45f;
     public float pitchMult = 30f;
 
-    [Header("Dynamic")] [Range(0-4)]
+    [Header("Dynamic")] [Range(0, 4)]
     public float shieldLevel = 1;
 
     void Awake() {
@@ -22,14 +22,14 @@ public class Hero : MonoBehaviour
 
     void Update() {
         float hAxis = Input.GetAxis("Horizontal");
-        float vhAxis = Input.GetAxis("Vertical");
+        float vAxis = Input.GetAxis("Vertical");
 
         Vector3 pos = transform.position;
         pos.x += hAxis * speed * Time.deltaTime;
         pos.y += vAxis * speed * Time.deltaTime;
         transform.position = pos;
 
-        transform.rotation = Quaternion.Euler(vhAxis*pitchMult, hAxis*rollMult);
+        transform.rotation = Quaternion.Euler(vAxis*pitchMult, hAxis*rollMult, 0);
 
 
     }
