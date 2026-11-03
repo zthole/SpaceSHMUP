@@ -77,10 +77,10 @@ public class Hero : MonoBehaviour
                         weap.SetType(pUp.type);
                     } else {
                         ClearWeapons();
-                        weapons[0].SetType(pUp.types);
+                        weapons[0].SetType(pUp.type);
                     }
-                    break;
                 }
+                break;
         }
         pUp.AbsorbedBy(this.gameObject);
     }
