@@ -26,7 +26,7 @@ public class WeaponDefinition
     [Tooltip("Damage caused per second by the Laser")]
     public float damagePerSec = 0;
     [Tooltip("Seconds to delay between shots")]
-    public float damageBetweenShots = 0;
+    public float delayBetweenShots = 0;
     [Tooltip("Velocity of individual Projectiles")]
     public float velocity = 50;
 }
@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
         shotPointTrans = transform.GetChild(0);
         SetType(_type);
 
-        Hero hero = GetComponentInParent<Hero>;
+        Hero hero = GetComponentInParent<Hero>();
         if(hero != null) {
             hero.fireEvent += Fire;
         }

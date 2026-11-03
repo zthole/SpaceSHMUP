@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnEnemies: 1
   prefabEnemies:
-  - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+  - {fileID: 3843786784827029511, guid: d972dc6b561f5e54ba6b3394fb491ad6, type: 3}
   enemySpawnPerSecond: 0.5
   enemyInsetDefault: 1.5
   gameRestartDelay: 2
@@ -329,7 +329,7 @@ MonoBehaviour:
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 1
     damagePerSec: 0
-    damageBetweenShots: 0.2
+    delayBetweenShots: 0
     velocity: 50
   - type: 2
     letter: S
@@ -339,7 +339,7 @@ MonoBehaviour:
     projectileColor: {r: 0.19215688, g: 0.6509804, b: 0.8313726, a: 1}
     damageOnHit: 1
     damagePerSec: 0
-    damageBetweenShots: 0.4
+    delayBetweenShots: 0
     velocity: 50
   - type: 6
     letter: O
@@ -349,7 +349,7 @@ MonoBehaviour:
     projectileColor: {r: 0.7207546, g: 0.7207546, b: 0.7207546, a: 1}
     damageOnHit: 0
     damagePerSec: 0
-    damageBetweenShots: 0
+    delayBetweenShots: 0
     velocity: 50
 --- !u!114 &963194230
 MonoBehaviour:
@@ -376,6 +376,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404896251}
     m_Modifications:
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: _type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.letter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: nextShotTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.damageOnHit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.projectilePrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.delayBetweenShots
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: def.weaponModelPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6355754718382775302, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
       propertyPath: m_Name
       value: Weapon
