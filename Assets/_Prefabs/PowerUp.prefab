@@ -151,7 +151,7 @@ MonoBehaviour:
   driftMinMax: {x: 0.25, y: 2}
   lifeTime: 10
   fadeTime: 4
-  type: 0
+  _type: 0
   cube: {fileID: 0}
   letter: {fileID: 0}
   rotPerSecond: {x: 0, y: 0, z: 0}
