@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour
     public float fireRate = 0.3f;
     public float health = 10;
     public int score = 100;
+    public float powerUpDropChance = 1f;
 
     protected BoundsCheck bndCheck;
+    protected bool calledShipDestroyed = false;
 
     void Awake() {
         bndCheck = GetComponent<BoundsCheck>();
@@ -49,6 +51,10 @@ public class Enemy : MonoBehaviour
             if(bndCheck.isOnScreen) {
                 health -= Main.GET_WEAPON_DEFINITION(p.type).damageOnHit;
                 if(health <= 0) {
+                    if(!calledShipDestroyed) {
+                        calledShipDestroyed = true;
+                        Main.SHIP_DESTROYED(this);
+                    }
                     Destroy(this.gameObject);
                 }
             }

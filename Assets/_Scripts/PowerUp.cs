@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour
     public float fadeTime = 4;
 
     [Header("Dynamic")]
-    public eWeaponType type;
+    public eWeaponType _type;
     public GameObject cube;
     public TextMesh letter;
     public Vector3 rotPerSecond;
@@ -70,7 +70,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
-    public eWeaponType _type {get {return _type;} set {SetType(value);} }
+    public eWeaponType type {get {return _type;} set {SetType(value);} }
 
     public void SetType(eWeaponType wt) {
         WeaponDefinition def = Main.GET_WEAPON_DEFINITION(wt);
