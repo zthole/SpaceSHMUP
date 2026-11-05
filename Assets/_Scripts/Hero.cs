@@ -83,8 +83,12 @@ public class Hero : MonoBehaviour
                     } else {
                         ClearWeapons();
                         weapons[0].SetType(pUp.type);
-                    }
+                    } 
+                } else {
+                    ClearWeapons();
+                    weapons[0].SetType(pUp.type);
                 }
+
                 break;
         }
         pUp.AbsorbedBy(this.gameObject);
