@@ -19,10 +19,19 @@ public class Main : MonoBehaviour
                                             eWeaponType.blaster, eWeaponType.blaster,
                                             eWeaponType.spread, eWeaponType.shield };
     private BoundsCheck bndCheck;
+
+    [Header("Scoring")]
+    static public int currentScore = 0;
+    static public int highScore = 0;
+
+    const string HIGH_SCORE_KEY = "HighScore";
     
     void Awake() {
         S = this;
         bndCheck = GetComponent<BoundsCheck>();
+
+        currentScore = 0;
+        highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY, 0);
 
         Invoke(nameof(SpawnEnemy), 1f/enemySpawnPerSecond);
 
@@ -67,7 +76,22 @@ public class Main : MonoBehaviour
     }
 
     static public void HERO_DIED() {
+        if(currentScore > highScore) {
+            highScore = currentScore;
+
+            PlayerPrefs.SetInt(HIGH_SCORE_KEY, highScore);
+            PlayerPrefs.Save();
+
+            Debug.Log("New High Score: " + highScore);
+        }
+
         S.DelayedRestart();
+    }
+
+    static public void addScore(int points) {
+        currentScore += points;
+
+        Debug.Log("Current Score: " + currentScore);
     }
 
     static public WeaponDefinition GET_WEAPON_DEFINITION(eWeaponType wt) {

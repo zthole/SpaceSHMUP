@@ -53,6 +53,9 @@ public class Enemy : MonoBehaviour
                 if(health <= 0) {
                     if(!calledShipDestroyed) {
                         calledShipDestroyed = true;
+                        if(p.type == eWeaponType.blaster || p.type == eWeaponType.spread) {
+                            Main.addScore(score);
+                        }
                         Main.SHIP_DESTROYED(this);
                     }
                     Destroy(this.gameObject);
