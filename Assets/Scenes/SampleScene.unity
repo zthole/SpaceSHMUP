@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14284c7cb3b6bd418a20bdd0a25e3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEnemies: 0
+  spawnEnemies: 1
   prefabEnemies:
   - {fileID: 3843786784827029511, guid: d972dc6b561f5e54ba6b3394fb491ad6, type: 3}
   - {fileID: 3843786784827029511, guid: d972dc6b561f5e54ba6b3394fb491ad6, type: 3}
@@ -579,6 +579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404896251}
     m_Modifications:
+    - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
+      propertyPath: _type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2298125970177041442, guid: 02d4db17e84acd342abcbabb4c5a207c, type: 3}
       propertyPath: def.type
       value: 0
@@ -946,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3128039547275384532, guid: a5534ff81382eeb4b81888a8d3f3d11e, type: 3}
       propertyPath: _type
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3128039547275384532, guid: a5534ff81382eeb4b81888a8d3f3d11e, type: 3}
       propertyPath: letter
